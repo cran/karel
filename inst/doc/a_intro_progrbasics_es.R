@@ -22,6 +22,10 @@ sqrt(100)
 5^3
 
 ## ---- eval=FALSE--------------------------------------------------------------
+#  # Instalar desde CRAN el paquete karel
+#  install.packages("karel")
+
+## ---- eval=FALSE--------------------------------------------------------------
 #  # Instalar desde CRAN el paquete devtools
 #  install.packages("devtools")
 #  # Instalar desde GitHub el paquete karel

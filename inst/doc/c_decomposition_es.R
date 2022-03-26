@@ -86,24 +86,24 @@ knitr::include_graphics('19.png')
 #  #  --------------- Cargar paquete Karel --------------------
 #  
 #  library(karel)
-#  cargar_super_karel() # pone a disposición girar_izquierda() y darse_vuelta()
+#  cargar_super_karel() # pone a disposición girar_derecha() y darse_vuelta()
 #  
 #  # ------------ Definición de funciones auxiliares-----------
 #  
 #  llenar_agujero <- function() {
-#    avanzar()
 #    girar_derecha()
 #    avanzar()
 #    poner_coso()
 #    darse_vuelta()
 #    avanzar()
 #    girar_derecha()
-#    avanzar()
 #  }
 #  
 #  # ------------------- Programa principal --------------------
 #  generar_mundo("mundo002")
+#  avanzar()
 #  llenar_agujero()
+#  avanzar()
 #  ejecutar_acciones()
 
 ## ----  echo=FALSE, fig.align="center"-----------------------------------------
@@ -118,23 +118,23 @@ if (knitr::is_html_output()) knitr::include_graphics('20.gif')
 #  # ------------ Definición de funciones auxiliares-----------
 #  
 #  # Función: llenar_agujero
-#  # Condición inicial: Karel se encuentra en la avenida anterior a la del agujero,
+#  # Condición inicial: Karel se encuentra sobre el agujero (en la calle anterior),
 #  # mirando al este
-#  # Condición final: Karel se encuentra en la avenida posterior a la del agujero,
-#  # mirando al oeste, y ha colocado un coso en el agujero
+#  # Condición final: Karel se encuentra en la misma posición que al inicio y ha
+#  # colocado un coso en el agujero
 #  llenar_agujero <- function() {
-#    avanzar()
 #    girar_derecha()
 #    avanzar()
 #    poner_coso()
 #    darse_vuelta()
 #    avanzar()
 #    girar_derecha()
-#    avanzar()
 #  }
 #  
 #  # ------------------- Programa principal -------------------
 #  generar_mundo("mundo002")
+#  avanzar()
 #  llenar_agujero()
+#  avanzar()
 #  ejecutar_acciones()
 

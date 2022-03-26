@@ -12,7 +12,7 @@
 
 
 
-<title>Introducción</title>
+<title>Introducción y nociones básicas sobre programación</title>
 
 <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
 
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<h1 class="title toc-ignore">Introducción</h1>
+<h1 class="title toc-ignore">Introducción y nociones básicas sobre programación</h1>
 
 
 
@@ -248,11 +248,14 @@ Captura de pantalla de RStudio
 <li><p>La <strong>base</strong> (<em>R Base</em>), que se instala cuando descargamos el programa desde <a href="https://cran.r-project.org/">CRAN</a> (“Comprehensive R Archive Network”). Contiene, entre otras cosas, una serie de herramientas básicas y fundamentales de R.</p></li>
 <li><p><strong>Paquetes adicionales</strong>. Un paquete es un conjunto de archivos que se descarga de forma opcional desde CRAN u otros repositorios y que sirven para hacer alguna tarea especial. Por ejemplo, para poder jugar con Karel deberemos instalar el paquete que contiene su implementación, llamado <code>karel</code>.</p></li>
 </ul>
-<p>Como dijimos antes, en la pestaña <em>Packages</em> del panel de abajo a la derecha tiene el listado de todos los paquetes que ya están instalados (muchos vienen con R Base). Allí también hay un botón para instalar nuevos desde CRAN, aunque otra opción es correr la instrucción <code>install.packages(&quot;nombredelpaquete&quot;)</code>. También es posible instalar paquetes publicados en otros repositorios. Por ejemplo, es muy común descargar paquetes en desarrollo o en experimentación que estén disponibles en la plataforma Github. Estos paquetes se instalan especificando el nombre de la cuenta de Github de quien lo haya publicado y el nombre del paquete. Dicho procedimiento es el que debemos seguir para instalar el paquete <code>karel</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar desde CRAN el paquete devtools</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar desde GitHub el paquete karel</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;mpru/karel&quot;</span>)</span></code></pre></div>
+<p>Como dijimos antes, en la pestaña <em>Packages</em> del panel de abajo a la derecha tiene el listado de todos los paquetes que ya están instalados (muchos vienen con R Base). Allí también hay un botón para instalar nuevos desde CRAN, aunque otra opción es correr la instrucción <code>install.packages(&quot;nombredelpaquete&quot;)</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar desde CRAN el paquete karel</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;karel&quot;</span>)</span></code></pre></div>
+<p>También es posible instalar paquetes publicados en otros repositorios. Por ejemplo, es muy común descargar paquetes en desarrollo o en experimentación que estén disponibles en la plataforma Github. Estos paquetes se instalan especificando el nombre de la cuenta de Github de quien lo haya publicado y el nombre del paquete. Si queremos instalar la versión en desarrollo del paquete <code>karel</code> (no es necesario) deberíamos hacer:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar desde CRAN el paquete devtools</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar desde GitHub el paquete karel</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;mpru/karel&quot;</span>)</span></code></pre></div>
 <p>Un paquete se instala una sola vez, pero cada vez que lo queramos usar debemos <em>cargarlo</em> para que las herramientas que trae queden a nuestra disposición. Eso se hace con la instrucción <code>library(&quot;nombredelpaquete&quot;)</code>, por ejemplo, <code>library(&quot;karel&quot;)</code>.</p>
 </div>
 </div>
